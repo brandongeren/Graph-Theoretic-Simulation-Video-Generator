@@ -217,12 +217,27 @@ public class GraphMaker {
 		return edge;
 	}
 	
-	public void addNewNode(String id) {
+	public void addNode(String label) {
       	GraphFactory factory = graphModel.factory();
       	DirectedGraph graph = this.getGraph();
-      	Node newNode = factory.newNode(id);
+      	Node newNode = factory.newNode(label);
       	graph.addNode(newNode);
 	}
+	
+	public void removeNode(String nodeLabel) {
+		DirectedGraph graph = this.getGraph();
+		Node node = graph.getNode(nodeLabel);
+		graph.removeNode(node);
+	}
+	
+	public void removeEdge(String nodeLabelSrc, String nodeLabelTgt) {
+		DirectedGraph graph = this.getGraph();
+		Node sourceNode = graph.getNode(nodeLabelSrc);
+		Node targetNode = graph.getNode(nodeLabelTgt);
+		Edge edge = graph.getEdge(sourceNode, targetNode);
+		graph.removeEdge(edge);
+	}
+
 	
 	public void addNodes(Collection<Node> nodes) {
 		DirectedGraph graph = this.getGraph();
@@ -234,7 +249,6 @@ public class GraphMaker {
 		graph.addAllEdges(edges);
 	}
 			
-
 	public void removeRandomEdge(Node node) {
 		DirectedGraph graph = this.getGraph();
         if(graph.getNeighbors(node).toArray().length != 0) {
@@ -400,25 +414,5 @@ public class GraphMaker {
 		}
 		node.setAttribute(propName, propValue);
 	}
-	
-	public void addNode(String nodeLabel) {
-		DirectedGraph graph = this.getGraph();
-		GraphFactory gf = this.getGraphModel().factory();
-		Node newNode = gf.newNode(nodeLabel);
-		graph.addNode(newNode);
-	}
-	
-	public void removeNode(String nodeLabel) {
-		DirectedGraph graph = this.getGraph();
-		Node node = graph.getNode(nodeLabel);
-		graph.removeNode(node);
-	}
-	
-	public void removeEdge(String nodeLabelSrc, String nodeLabelTgt) {
-		DirectedGraph graph = this.getGraph();
-		Node sourceNode = graph.getNode(nodeLabelSrc);
-		Node targetNode = graph.getNode(nodeLabelTgt);
-		Edge edge = graph.getEdge(sourceNode, targetNode);
-		graph.removeEdge(edge);
-	}
+		
 }
