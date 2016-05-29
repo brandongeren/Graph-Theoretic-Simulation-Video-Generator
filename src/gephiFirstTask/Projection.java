@@ -97,7 +97,7 @@ public class Projection {
 		// make nodes out of the value strings, then give them a weight column and initialize it to 0
 		int i = 1;
 		for (String id: values) {
-			newGM.addNewNode(id);
+			newGM.addNode(id);
 			Node newNode = newGM.getGraph().getNode(id);
 			
 			//only add the column if it's the first run through. otherwise, addColumn throws an error

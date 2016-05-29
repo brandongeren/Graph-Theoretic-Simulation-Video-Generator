@@ -102,7 +102,7 @@ public class ConfigReader {
 		this.primaryLayer = primaryLayer;
 	}
 
-	public void readFromFile(String filename) throws FileNotFoundException {
+	public void readFromFile() throws FileNotFoundException {
 		Scanner fileSc = new Scanner(new File(filename));
 		while (fileSc.hasNextLine()) {
 			String line = fileSc.nextLine();
