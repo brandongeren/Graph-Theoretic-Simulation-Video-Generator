@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2016-05-16">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="weight" title="weight" type="integer"></attribute>
+    </attributes>
+    <nodes>
+      <node id="0 &amp;&amp; 17" label="0 &amp;&amp; 17">
+        <attvalues>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 16" label="0 &amp;&amp; 16">
+        <attvalues>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 14" label="0 &amp;&amp; 14">
+        <attvalues>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 11" label="0 &amp;&amp; 11">
+        <attvalues>
+          <attvalue for="weight" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 8" label="0 &amp;&amp; 8">
+        <attvalues>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 12" label="0 &amp;&amp; 12">
+        <attvalues>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 7" label="0 &amp;&amp; 7">
+        <attvalues>
+          <attvalue for="weight" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 10" label="0 &amp;&amp; 10">
+        <attvalues>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="5 &amp;&amp; 5" label="5 &amp;&amp; 5">
+        <attvalues>
+          <attvalue for="weight" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="4 &amp;&amp; 4" label="4 &amp;&amp; 4">
+        <attvalues>
+          <attvalue for="weight" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="3 &amp;&amp; 3" label="3 &amp;&amp; 3">
+        <attvalues>
+          <attvalue for="weight" value="31"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="2 &amp;&amp; 2" label="2 &amp;&amp; 2">
+        <attvalues>
+          <attvalue for="weight" value="299"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 5" label="0 &amp;&amp; 5">
+        <attvalues>
+          <attvalue for="weight" value="25"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 6" label="0 &amp;&amp; 6">
+        <attvalues>
+          <attvalue for="weight" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 4" label="0 &amp;&amp; 4">
+        <attvalues>
+          <attvalue for="weight" value="24"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 3" label="0 &amp;&amp; 3">
+        <attvalues>
+          <attvalue for="weight" value="33"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 2" label="0 &amp;&amp; 2">
+        <attvalues>
+          <attvalue for="weight" value="56"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="1 &amp;&amp; 1" label="1 &amp;&amp; 1">
+        <attvalues>
+          <attvalue for="weight" value="14"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+      <node id="0 &amp;&amp; 1" label="0 &amp;&amp; 1">
+        <attvalues>
+          <attvalue for="weight" value="109"></attvalue>
+        </attvalues>
+        <viz:size value="0.0"></viz:size>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="5 &amp;&amp; 5" target="0 &amp;&amp; 11"></edge>
+      <edge id="1" source="5 &amp;&amp; 5" target="0 &amp;&amp; 7"></edge>
+      <edge id="2" source="5 &amp;&amp; 5" target="0 &amp;&amp; 5"></edge>
+      <edge id="3" source="5 &amp;&amp; 5" target="0 &amp;&amp; 4"></edge>
+      <edge id="4" source="5 &amp;&amp; 5" target="0 &amp;&amp; 2"></edge>
+      <edge id="5" source="4 &amp;&amp; 4" target="0 &amp;&amp; 11"></edge>
+      <edge id="6" source="4 &amp;&amp; 4" target="0 &amp;&amp; 7" weight="2.0"></edge>
+      <edge id="7" source="4 &amp;&amp; 4" target="0 &amp;&amp; 5"></edge>
+      <edge id="8" source="4 &amp;&amp; 4" target="0 &amp;&amp; 6" weight="2.0"></edge>
+      <edge id="9" source="4 &amp;&amp; 4" target="0 &amp;&amp; 4" weight="5.0"></edge>
+      <edge id="10" source="4 &amp;&amp; 4" target="0 &amp;&amp; 3" weight="2.0"></edge>
+      <edge id="11" source="4 &amp;&amp; 4" target="0 &amp;&amp; 2" weight="5.0"></edge>
+      <edge id="12" source="4 &amp;&amp; 4" target="0 &amp;&amp; 1" weight="6.0"></edge>
+      <edge id="13" source="3 &amp;&amp; 3" target="0 &amp;&amp; 17" weight="4.0"></edge>
+      <edge id="14" source="3 &amp;&amp; 3" target="0 &amp;&amp; 14" weight="3.0"></edge>
+      <edge id="15" source="3 &amp;&amp; 3" target="0 &amp;&amp; 11" weight="2.0"></edge>
+      <edge id="16" source="3 &amp;&amp; 3" target="0 &amp;&amp; 8"></edge>
+      <edge id="17" source="3 &amp;&amp; 3" target="0 &amp;&amp; 7" weight="4.0"></edge>
+      <edge id="18" source="3 &amp;&amp; 3" target="0 &amp;&amp; 10" weight="2.0"></edge>
+      <edge id="19" source="3 &amp;&amp; 3" target="0 &amp;&amp; 5" weight="11.0"></edge>
+      <edge id="20" source="3 &amp;&amp; 3" target="0 &amp;&amp; 6" weight="10.0"></edge>
+      <edge id="21" source="3 &amp;&amp; 3" target="0 &amp;&amp; 4" weight="10.0"></edge>
+      <edge id="22" source="3 &amp;&amp; 3" target="0 &amp;&amp; 3" weight="8.0"></edge>
+      <edge id="23" source="3 &amp;&amp; 3" target="0 &amp;&amp; 2" weight="21.0"></edge>
+      <edge id="24" source="3 &amp;&amp; 3" target="0 &amp;&amp; 1" weight="17.0"></edge>
+      <edge id="25" source="2 &amp;&amp; 2" target="0 &amp;&amp; 17" weight="13.0"></edge>
+      <edge id="26" source="2 &amp;&amp; 2" target="0 &amp;&amp; 16" weight="16.0"></edge>
+      <edge id="27" source="2 &amp;&amp; 2" target="0 &amp;&amp; 14" weight="11.0"></edge>
+      <edge id="28" source="2 &amp;&amp; 2" target="0 &amp;&amp; 11" weight="29.0"></edge>
+      <edge id="29" source="2 &amp;&amp; 2" target="0 &amp;&amp; 8" weight="7.0"></edge>
+      <edge id="30" source="2 &amp;&amp; 2" target="0 &amp;&amp; 12" weight="12.0"></edge>
+      <edge id="31" source="2 &amp;&amp; 2" target="0 &amp;&amp; 7" weight="19.0"></edge>
+      <edge id="32" source="2 &amp;&amp; 2" target="0 &amp;&amp; 10" weight="8.0"></edge>
+      <edge id="33" source="2 &amp;&amp; 2" target="0 &amp;&amp; 5" weight="112.0"></edge>
+      <edge id="34" source="2 &amp;&amp; 2" target="0 &amp;&amp; 6" weight="36.0"></edge>
+      <edge id="35" source="2 &amp;&amp; 2" target="0 &amp;&amp; 4" weight="76.0"></edge>
+      <edge id="36" source="2 &amp;&amp; 2" target="0 &amp;&amp; 3" weight="88.0"></edge>
+      <edge id="37" source="2 &amp;&amp; 2" target="0 &amp;&amp; 2" weight="84.0"></edge>
+      <edge id="38" source="2 &amp;&amp; 2" target="0 &amp;&amp; 1" weight="86.0"></edge>
+      <edge id="39" source="1 &amp;&amp; 1" target="0 &amp;&amp; 7"></edge>
+      <edge id="40" source="1 &amp;&amp; 1" target="0 &amp;&amp; 6" weight="6.0"></edge>
+      <edge id="41" source="1 &amp;&amp; 1" target="0 &amp;&amp; 4" weight="4.0"></edge>
+      <edge id="42" source="1 &amp;&amp; 1" target="0 &amp;&amp; 3"></edge>
+      <edge id="43" source="1 &amp;&amp; 1" target="0 &amp;&amp; 2" weight="2.0"></edge>
+    </edges>
+  </graph>
+</gexf>
