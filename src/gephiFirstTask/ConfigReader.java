@@ -6,10 +6,12 @@ import java.util.Scanner;
 
 public class ConfigReader {
 	// GEXF file location
+	// trace file location
 	// output file location (movie file of some sort)
-	// resolution
+	// resolution (height and width)
 	// primary layer for layout purposes
 	// which property governs node size
+	// amount of time per frame
 	
 	
 	/** 
@@ -23,6 +25,10 @@ public class ConfigReader {
 	 width: 1920
 	 nodeSizeProperty: HCV:1
 	 primaryLayer: Sex
+	 delta: 2.0
+	 
+	 Comments: anything after ## will be treated as a comment
+	 
 	 */
 	
 	private String filename;
@@ -33,9 +39,18 @@ public class ConfigReader {
 	private String outputFile;
 	private String nodeSizeProperty;
 	private String primaryLayer;
+	private double timePerFrame;
 
 	public ConfigReader(String filename) {
 		this.filename = filename;
+		
+		//default values for some of the parameters
+		this.width = 1920;
+		this.height = 1080;
+		this.timePerFrame = 1.0;
+		String userHome = System.getProperty("user.home");
+		String separator = System.getProperty("file.separator");
+		this.outputFile = userHome + separator + "Movies" + separator + "movie" + "." + "mp4";
 	}
 
 	public String getFilename() {
@@ -101,6 +116,14 @@ public class ConfigReader {
 	public void setPrimaryLayer(String primaryLayer) {
 		this.primaryLayer = primaryLayer;
 	}
+	
+	public double getTimePerFrame() {
+		return timePerFrame;
+	}
+	
+	public void setTimePerFrame(double timePerFrame) {
+		this.timePerFrame = timePerFrame;
+	}
 
 	public void readFromFile() throws FileNotFoundException {
 		Scanner fileSc = new Scanner(new File(filename));
@@ -108,32 +131,40 @@ public class ConfigReader {
 			String line = fileSc.nextLine();
 			Scanner lineSc = new Scanner(line);
 			lineSc.useDelimiter(": ");
-			String tag = lineSc.next();
-			tag.toLowerCase();
-			System.out.println(tag);
-			switch (tag) {
-				case "height": 
-					this.setHeight(lineSc.nextInt());
-					break;
-				case "width":
-					this.setWidth(lineSc.nextInt());
-					break;
-				case "graphFile":
-					this.setGraphFile(lineSc.next());
-					break;
-				case "outputFile":
-					this.setOutputFile(lineSc.next());
-					break;
-				case "traceFile":
-					this.setTraceFile(lineSc.next());
-					break;
-				case "nodeSizeProperty":
-					this.setNodeSizeProperty(lineSc.next());
-					break;
-				case "primaryLayer":
-					this.setPrimaryLayer(lineSc.next());
-					break;
-				default: break;
+			if (lineSc.hasNext()) {
+				String tag = lineSc.next();
+				tag.toLowerCase();
+				String value = lineSc.next();
+				value = removeComment(value);
+				value = value.trim();
+				switch (tag) {
+					case "height": 
+						this.setHeight(Integer.parseInt(value));
+						break;
+					case "width":
+						this.setWidth(Integer.parseInt(value));
+						break;
+					case "graphFile": case "graph":
+						this.setGraphFile(value);
+						break;
+					case "outputFile": case "output":
+						this.setOutputFile(value);
+						break;
+					case "traceFile": case "trace":
+						this.setTraceFile(value);
+						break;
+					case "nodeSizeProperty":
+						this.setNodeSizeProperty(value);
+						break;
+					case "primaryLayer":
+						this.setPrimaryLayer(value);
+						break;
+					case "delta": case "timePerFrame":
+						this.setTimePerFrame(Double.parseDouble(value));
+						break;
+					default: break;
+				}
+
 			}
 			lineSc.close();
 		}
@@ -141,5 +172,30 @@ public class ConfigReader {
 		fileSc.close();
 	}
 	
-	// use switch statements to check for each of these properties
+	public String toString() {
+		String toString = "";
+				
+		String newline = "\n";
+		toString += "File Name: " + filename + newline;
+		toString += "Height: " + height + newline;
+		toString += "Width: " + width + newline;
+		toString += "Graph File Location: " + graphFile + newline;
+		toString += "Trace File Location: " + traceFile + newline;
+		toString += "Output File Location: " + outputFile + newline;
+		toString += "Node Size Property:" + nodeSizeProperty + newline;
+		toString += "Primary Layer: " + primaryLayer + newline;
+		toString += "Time Per Frame: " + timePerFrame + newline;
+		
+		return toString;
+	}
+	
+	public String removeComment(String in) {
+		String comment = "##";
+		int idx = in.indexOf(comment);
+		if (idx != -1) {
+			in = in.substring(0, idx);
+		}
+		
+		return in;
+	}
 }

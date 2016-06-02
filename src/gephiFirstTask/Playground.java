@@ -27,24 +27,10 @@ import org.openide.util.Lookup;
 public class Playground {
 	public static void main(String[] args) throws IOException {
 	
-		GraphMaker gm = new GraphMaker();
-		gm.importGraph("lookAtMe.gexf");
-		
-		HashSet<String> propertySet = new HashSet<String>();
-		propertySet.add("degree");
-		propertySet.add("outdegree");
-
-		
-		Projection firstProj = new Projection(propertySet, gm);
-		GraphMaker newGM = firstProj.generateGraph();
-		newGM.forceAtlas(100);
-		newGM.yifanHu(1);
-		newGM.initPreviewModel(true, new Color(0x69D2E7), 0.2f);
-		newGM.exportGraphFile("projection.gexf");
-		
-		
-		
-		
+		String filename = "/Users/brandongeren/Documents/ElasticSearchandGephiInterface/GephiBeginnings/configTest.txt";
+		ConfigReader cr = new ConfigReader(filename);
+		cr.readFromFile();
+		System.out.println(cr.toString());
 		
 	}
 }
