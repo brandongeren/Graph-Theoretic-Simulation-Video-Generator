@@ -43,12 +43,12 @@ public class SimpleImageExporter {
 	public static void main(String[] args) throws IOException {
 		
 		GraphMaker gm = new GraphMaker();
-		gm.importGraph("time=100.gephi_sex.gexf");
+		gm.importGraph("time=7300.gephi_drug_co_use.gexf");
 		gm.filterByDegree(1);
 		gm.rankColorByDegree(new Color(0xFFFF00), new Color(0xFF0000));
 		gm.rankSizeByCentrality(3, 13);
 		ConvergenceCriteria cc = new AverageDeltaConvergence(gm.getGraphModel().factory());
-		gm.layoutUntilConverged(1f, cc);
+		gm.layoutUntilConverged(1.5f, cc);
 		gm.initPreviewModel(false, new Color(0x0000FF), 0.1f);
 		gm.exportPNG("sexdata", 10000, 10000);
 		

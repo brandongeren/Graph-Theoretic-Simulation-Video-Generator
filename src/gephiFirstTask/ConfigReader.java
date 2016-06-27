@@ -189,7 +189,7 @@ public class ConfigReader {
 		return toString;
 	}
 	
-	public String removeComment(String in) {
+	public static String removeComment(String in) {
 		String comment = "##";
 		int idx = in.indexOf(comment);
 		if (idx != -1) {

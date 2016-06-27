@@ -128,6 +128,9 @@ public class GraphMaker {
         pngEx.setHeight(height);
         pngEx.setWidth(width);
 
+        
+        rankColorByDegree(new Color(0xFFFF00), new Color(0xFF0000));
+        initPreviewModel(false, new Color(0x0000FF), 0.1f);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ec.exportStream(baos, pngEx);
         return baos.toByteArray();
@@ -192,6 +195,7 @@ public class GraphMaker {
       	GraphFactory factory = graphModel.factory();
       	
       	Node randNode = this.pickRandomNode();    	
+   
     	Edge newEdge = factory.newEdge(node, randNode);
     	
     	// the first part of the conditional prevents self-directed edges
@@ -215,6 +219,13 @@ public class GraphMaker {
 		Edge edge = factory.newEdge(source, target);
 		graph.addEdge(edge);
 		return edge;
+	}
+	
+	public Edge addEdge(String sourceLabel, String targetLabel) {
+		DirectedGraph graph = this.getGraph();
+		Node source = graph.getNode(sourceLabel);
+		Node target = graph.getNode(targetLabel);
+		return addEdge(source, target);
 	}
 	
 	public void addNode(String label) {
@@ -414,5 +425,5 @@ public class GraphMaker {
 		}
 		node.setAttribute(propName, propValue);
 	}
-		
+			
 }

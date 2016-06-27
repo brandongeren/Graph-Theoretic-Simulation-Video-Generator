@@ -27,10 +27,6 @@ import org.openide.util.Lookup;
 public class Playground {
 	public static void main(String[] args) throws IOException {
 	
-		String filename = "/Users/brandongeren/Documents/ElasticSearchandGephiInterface/GephiBeginnings/configTest.txt";
-		ConfigReader cr = new ConfigReader(filename);
-		cr.readFromFile();
-		System.out.println(cr.toString());
 		
 	}
 }
